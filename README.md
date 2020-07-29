@@ -1,4 +1,4 @@
-# Book Store
+	# Book Store
 
 [![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
 [![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
@@ -11,8 +11,13 @@ Minimal [Spring Boot](http://projects.spring.io/spring-boot/) sample app.
 For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
--[JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [Maven 3](https://maven.apache.org)
+Database
+- SQL server.
+
+
+
 
 ## Running the application locally
 
@@ -24,9 +29,9 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 mvn spring-boot:run
 ```
 ##Git 
-	-Tạo branch mới khi muốn push code của 1 task nhất định.
-	-Tất cả các branch đều phải được pull về branch Develop.
-	-Khi cần pull request nhắn tin về zalo để mọi người biết và hỗ trợ.
+	Tạo branch mới khi muốn push code của 1 task nhất định.
+	Tất cả các branch đều phải được pull về branch Develop.
+	Khi cần pull request nhắn tin về zalo để mọi người biết và hỗ trợ.
 	
 
  
