@@ -3,10 +3,18 @@ package bookStore.models;
 import java.sql.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "Users")
+@EntityListeners(AuditingEntityListener.class)
 public class Users {
 	private int Idu;
 	private String FirstnameU;
@@ -73,7 +81,7 @@ public class Users {
 	public void setEmailU(String emailU) {
 		EmailU = emailU;
 	}
-	@Column(name="sexu",nullable=false)
+	@Column(name="sexu",nullable=false,columnDefinition="bit default 1")
 	public boolean isSexU() {
 		return SexU;
 	}
@@ -94,14 +102,14 @@ public class Users {
 	public void setPasswordU(String passwordU) {
 		PasswordU = passwordU;
 	}
-	@Column(name="datecreateu",nullable=false)
+	@Column(name="datecreateu",nullable=false,columnDefinition="date default CURRENT_TIMESTAMP")
 	public Date getDatecreateU() {
 		return DatecreateU;
 	}
 	public void setDatecreateU(Date datecreateU) {
 		DatecreateU = datecreateU;
 	}
-	@Column(name="statusu",nullable=false)
+	@Column(name="statusu",nullable=false,columnDefinition="bit default 1")
 	public boolean isStatusU() {
 		return StatusU;
 	}
