@@ -3,10 +3,19 @@ package bookStore.models;
 import java.sql.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+
+@Entity
+@Table(name = "Books")
+@EntityListeners(AuditingEntityListener.class)
 public class Books {
 	private int Idb;
 	private String NameB;
@@ -133,7 +142,7 @@ public class Books {
 	public void setPrice(double price) {
 		Price = price;
 	}
-
+	
 	@Column(name = "amount", nullable = false)
 	public int getAmount() {
 		return Amount;
@@ -152,7 +161,7 @@ public class Books {
 		Idc = idc;
 	}
 
-	@Column(name = "statusb", nullable = false)
+	@Column(name = "statusb", nullable = false, columnDefinition = "bit default 1")
 	public boolean isStatusB() {
 		return StatusB;
 	}
