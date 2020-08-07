@@ -71,7 +71,7 @@ public class Books {
 		Publishdate = publishdate;
 	}
 
-	@Column(name = "language", nullable = false, length = 50)
+	@Column(name = "language", nullable = false, length = 100)
 	public String getLanguage() {
 		return Language;
 	}
@@ -125,7 +125,7 @@ public class Books {
 		Descriptions = descriptions;
 	}
 
-	@Column(name = "imagepath", nullable = false, length = 200)
+	@Column(name = "imagepath", nullable = false)
 	public String getImagepath() {
 		return Imagepath;
 	}
@@ -161,7 +161,7 @@ public class Books {
 		Idc = idc;
 	}
 
-	@Column(name = "statusb", nullable = false, columnDefinition = "bit default 1")
+	@Column(name = "statusb", nullable = false)
 	public boolean isStatusB() {
 		return StatusB;
 	}

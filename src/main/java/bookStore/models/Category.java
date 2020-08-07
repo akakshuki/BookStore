@@ -27,14 +27,14 @@ public class Category {
 	public void setIdc(int idc) {
 		Idc = idc;
 	}
-	@Column(name="namec",nullable = false,length = 50) 
+	@Column(name="namec",nullable = false,length = 100) 
 	public String getNameC() {
 		return NameC;
 	}
 	public void setNameC(String nameC) {
 		NameC = nameC;
 	}
-	@Column(name="statusc",nullable = false,columnDefinition="bit default 1") 
+	@Column(name="statusc",nullable = false) 
 	public boolean isStatusC() {
 		return StatusC;
 	}
