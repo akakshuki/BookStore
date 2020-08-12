@@ -7,5 +7,5 @@ import bookStore.models.Users;
 
 @Repository
 public interface IUsersRepository extends JpaRepository<Users, Integer>{
-
+	
 }
