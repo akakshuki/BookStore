@@ -1,10 +1,18 @@
 package bookStore.models;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "Category")
+@EntityListeners(AuditingEntityListener.class)
 public class Category {
 	private int Idc;
 	private String NameC;
@@ -19,7 +27,7 @@ public class Category {
 	public void setIdc(int idc) {
 		Idc = idc;
 	}
-	@Column(name="namec",nullable = false,length = 50) 
+	@Column(name="namec",nullable = false,length = 100) 
 	public String getNameC() {
 		return NameC;
 	}

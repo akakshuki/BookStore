@@ -11,22 +11,29 @@ import javax.persistence.Table;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "Orderdetail")
+@Table(name = "Review")
 @EntityListeners(AuditingEntityListener.class)
-public class Orderdetail {
-	private int Idod;
+public class Review {
+	private int Idr;
+	private int Idu;
 	private int Idb;
-	private int Quantity;
-	private int Ido;
+	private String ContentReview;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	@Column(name="idod",nullable = false) 
-	public int getIdod() {
-		return Idod;
+	@Column(name="idr",nullable = false) 
+	public int getIdr() {
+		return Idr;
 	}
-	public void setIdod(int idod) {
-		Idod = idod;
+	public void setIdr(int idr) {
+		Idr = idr;
+	}
+	@Column(name="idu",nullable = false) 
+	public int getIdu() {
+		return Idu;
+	}
+	public void setIdu(int idu) {
+		Idu = idu;
 	}
 	@Column(name="idb",nullable = false) 
 	public int getIdb() {
@@ -35,19 +42,12 @@ public class Orderdetail {
 	public void setIdb(int idb) {
 		Idb = idb;
 	}
-	@Column(name="quantity",nullable = false) 
-	public int getQuantity() {
-		return Quantity;
+	@Column(name="contentreview",nullable = false) 
+	public String getContentReview() {
+		return ContentReview;
 	}
-	public void setQuantity(int quantity) {
-		Quantity = quantity;
-	}
-	@Column(name="ido",nullable = false) 
-	public int getIdo() {
-		return Ido;
-	}
-	public void setIdo(int ido) {
-		Ido = ido;
+	public void setContentReview(String contentReview) {
+		ContentReview = contentReview;
 	}
 
 }

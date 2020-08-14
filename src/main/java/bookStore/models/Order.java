@@ -3,10 +3,18 @@ package bookStore.models;
 import java.sql.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "Order")
+@EntityListeners(AuditingEntityListener.class)
 public class Order {
 	private int Ido;
 	private int Idu;
@@ -44,7 +52,7 @@ public class Order {
 	public void setTotal(double total) {
 		Total = total;
 	}
-	@Column(name="statuso",nullable = false) 
+	@Column(name="statuso",nullable = false,length=50,columnDefinition = "nvarchar default 'Pending'") 
 	public StatusOrder getStatusO() {
 		return StatusO;
 	}
