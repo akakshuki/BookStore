@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>this is error page.</h1>
+<h1>this is error page1.</h1>
 </body>
 </html>
