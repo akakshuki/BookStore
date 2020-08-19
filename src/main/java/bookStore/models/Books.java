@@ -33,6 +33,7 @@ public class Books {
 	private int Idc;
 	private boolean StatusB;
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idb", nullable = false)

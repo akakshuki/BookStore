@@ -1,10 +1,30 @@
 package bookStore.models.views;
 
+
+
 public class CartView {
 	private int Idca;
 	private int Idu;
 	private int Idb;
 	private int Quantity;
+	private BooksView Book;
+	
+	public CartView(int idca, int idu, int idb, int quantity, BooksView book) {
+		super();
+		Idca = idca;
+		Idu = idu;
+		Idb = idb;
+		Quantity = quantity;
+		Book = book;
+	}
+	
+	
+	public BooksView getBook() {
+		return Book;
+	}
+	public void setBook(BooksView book) {
+		Book = book;
+	}
 	public int getIdca() {
 		return Idca;
 	}

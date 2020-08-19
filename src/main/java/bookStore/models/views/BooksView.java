@@ -18,6 +18,29 @@ public class BooksView {
 	private int Amount;
 	private int Idc;
 	private boolean StatusB;
+	
+	public BooksView(int idb, String nameB, String publisher, Date publishdate, String language, int width, int height,
+			int weight, int pagenumber, String descriptions, String imagepath, double price, int amount, int idc,
+			boolean statusB) {
+		super();
+		Idb = idb;
+		NameB = nameB;
+		Publisher = publisher;
+		Publishdate = publishdate;
+		Language = language;
+		Width = width;
+		Height = height;
+		Weight = weight;
+		Pagenumber = pagenumber;
+		Descriptions = descriptions;
+		Imagepath = imagepath;
+		Price = price;
+		Amount = amount;
+		Idc = idc;
+		StatusB = statusB;
+	}
+
+	
 	public int getIdb() {
 		return Idb;
 	}
