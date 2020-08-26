@@ -23,7 +23,7 @@ public class CategoryController {
 		public String CateMgr(Model model,Category ct) {
 			List<Category> ls = caterep.findAll();
 			model.addAttribute("cates", ls);
-			return "category/catemgr";
+			return "admin/category/catemgr";
 		}
 
 		 
@@ -31,7 +31,7 @@ public class CategoryController {
 		 public String addCate(@ModelAttribute("cate1") Category ct, Model model) throws Exception{
 		  model.addAttribute("nameC",ct.getNameC());
 		  model.addAttribute("status",ct.isStatusC());
-		  return "category/cate_frm";
+		  return "admin/category/cate_frm";
 		 }
 		@RequestMapping(value="/cates_del",method = RequestMethod.GET)
 		public String CateDelete(@RequestParam int id) {
@@ -53,7 +53,7 @@ public class CategoryController {
 			model.addAttribute("cate_item", ct);
 			model.addAttribute("nameC",ct.getNameC());
 			model.addAttribute("status",ct.isStatusC());
-			return "category/cate_frm_update";
+			return "admin/category/cate_frm_update";
 		}
 		@RequestMapping(value = "/cates_change", method = RequestMethod.POST)
 			public String CateChange(Category cates) {
