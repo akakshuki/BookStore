@@ -20,5 +20,11 @@ public class mainController {
 
 		return "admin/AdminMainPage";
 	}
+	
+	@RequestMapping("/test")
+	public String test(Model model) {
+
+		return "test";
+	}
 
 }

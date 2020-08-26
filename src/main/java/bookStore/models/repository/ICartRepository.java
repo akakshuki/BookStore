@@ -7,5 +7,5 @@ import bookStore.models.Cart;
 
 @Repository
 public interface ICartRepository extends JpaRepository<Cart, Integer>{
-	
+
 }
